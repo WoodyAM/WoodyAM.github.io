@@ -4,9 +4,67 @@
 
 
 {% block css %}
-
+        body {
+            background-image: linear-gradient(to bottom right,#c38ee8,#f666b6);
+        }
+        #top-btns {
+            text-align: center;
+            margin-top:20px;
+        }
+        #pitch {
+            margin: 50px;
+            height: 70vh;
+            border-radius: 20px;
+            overflow: hidden;
+            background-color: white;
+            font-family: 'Open Sans', sans-serif;
+            padding: 20px;
+        }
+        a {
+            color: purple;
+        }
+        button {
+            background-color: white;
+        }
 {% endblock %}
 
 {% block content%}
+        <div id="top-btns">
+            <a href="../catch" type="button" class="btn btn-light btn-sm">Catch</a>
+            <button class="btn btn-light btn-sm" disabled>Pitch</button>
+        </div>
+    
+        <div id="all">
+    
+        <div id="pitch" class="jumbotron">
+            <form>
+                <div id="short-pitch">
+                    <h2>Pitch your idea in 10 words</h2>
+                    <input class="form-control form-control-lg" type="text" placeholder="Your elevator pitch">
+                </div>
+                
+                <div id="long-pitch">
+                    <h3>Now a detailed description (optional)</h3>
+                    <textarea class="form-control" rows="3" placeholder="Detailed description"></textarea>
+                </div>
+                
+                <div id="category">
+                    <h3>What category does it fall under?</h3>
+                    <select class="form-control">
+                      <option>Computer Science</option>
+                    </select>
+                </div>
+                
+                <div id="tags">
+                    <h4>Give your pitch related tags</h4>
+                    <textarea class="form-control" rows="2" placeholder='Separate tags with "," (e.g. Python, backend, Android Studio)'></textarea>
+                </div>
+                
+                
+                
+            </form>
+            
+        </div>
+        <button type="submit" class="btn btn-lg btn-block">Pitch It!</button>
 
 {% endblock %}

@@ -9,8 +9,8 @@ def pitch_view(request, *args, **kwargs):
      return render(request, "pitch.html", {})
 
 def catch_view(request, *args, **kwargs):
-    return render(request. "catch.html", {})
+    return render(request, "catch.html", {})
 
-def profie_view(request, *args, **kwargs):
-    return render(request. "profile.html", {})
+def profile_view(request, *args, **kwargs):
+    return render(request, "profile.html", {})
 

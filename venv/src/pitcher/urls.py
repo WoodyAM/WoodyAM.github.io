@@ -20,7 +20,7 @@ from pages.views import login_view, pitch_view, catch_view, profile_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('login/', login_view),
+    path('', login_view),
     path('pitch/', pitch_view),
     path('catch/', catch_view),
     path('profile/', profile_view),
