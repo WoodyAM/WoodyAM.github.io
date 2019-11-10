@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+
+{% block title %}CATCH{% endblock %}
+
+
+{% block css %}
+        #top-btns {
+            text-align: center;
+            margin-top:20px;
+        }
+        .jumbotron {
+            margin: 0 50px 20px 50px;
+            padding: 20px;
+            padding-top: 100px;
+            margin-top: 60px;
+            height: 70vh;
+            border-radius: 20px;
+            position: relative;
+            overflow: hidden;
+            color: white;
+            background-image: linear-gradient(to bottom right,#c38ee8,#f666b6);
+            text-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+            font-family: 'Open Sans', sans-serif;
+        /*    background-color: white;*/
+        }
+
+        #user-info {
+            bottom: 0;
+            background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.6));
+            margin: 0px -20px;
+            padding: 5px;
+            padding-left: 50px;
+            position: absolute;
+            right: 0;
+            left: 0;
+        }
+
+        #buttons {
+            
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        #mains>div {
+            height: 80px;
+            width: 80px;
+            background-color: aliceblue;
+            display: inline-block;
+            border-radius: 50%;
+            margin: 0px 10px 0px 10px;
+        }
+
+        #mains>div>img {
+            height: 80px;
+        }
+        a {
+            color: purple;
+        }
+{% endblock %}
+
+{% block content%}
+        <div id="top-btns">
+            <button type="button" class="btn btn-light btn-sm" disabled>Catch</button>
+            <a href="../pitch" class="btn btn-light btn-sm">Pitch</a>
+        </div>
+
+        <div id ="card" class="jumbotron">
+            <h1>{{ object.name }}</h1>
+
+            <div id="user-info">
+                <h3>{{ request.user }}</h3>
+                <h4>User occupation</h4>
+            </div>
+        </div>
+    {% load static %}
+        <div id="buttons">
+            <div id="mains">
+                <div>
+                    <img src="{% static "images/dislike.png" %}"> <!-- Figure these out! -->
+                </div>
+                <div>
+                    <img src="{% static "images/super.png" %}">
+                </div>
+                <div>
+                    <img src="{% static "images/like.png" %}">
+                </div>
+            </div>
+        </div>
+
+{% endblock %}
